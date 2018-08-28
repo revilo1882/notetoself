@@ -12,13 +12,11 @@ class App extends Component {
   }
 
   submit() {
-    const notes = this.state.notes;
+    const { notes, text } = this.state;
 
-    const newNote = { text: this.state.text };
+    notes.push({ text });
 
-    notes.push(newNote);
-
-    this.setState({ notes: notes });
+    this.setState({ notes });
   }
 
   render() {
