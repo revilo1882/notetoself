@@ -26,8 +26,6 @@ class App extends Component {
 
 		this.setState({ notes });
 
-		document.getElementById('form').reset();
-
 		bake_cookie(cookie_key, this.state.notes);
 	}
 
@@ -50,7 +48,7 @@ class App extends Component {
 				{
 					this.state.notes.map((note, index) => {
 						return (
-								<Note key={index} note={note} />
+							<Note key={index} note={note} />
 						);
 					})
 				}
