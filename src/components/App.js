@@ -6,61 +6,59 @@ import { bake_cookie, read_cookie, delete_cookie } from 'sfcookies';
 const cookie_key = 'NOTES';
 
 class App extends Component {
-  constructor() {
-    super();
+	constructor() {
+		super();
 
-    this.state = {
-      text: '',
-      notes: []
-    }
-  }
+		this.state = {
+			text: '',
+			notes: []
+		};
+	}
 
-  componentDidMount() {
-    this.setState({ notes: read_cookie(cookie_key) });
-  }
+	componentDidMount() {
+		this.setState({ notes: read_cookie(cookie_key) });
+	}
 
-  submit() {
-    const { notes, text } = this.state;
+	submit() {
+		const { notes, text } = this.state;
 
-    notes.push({ text });
+		notes.push({ text });
 
-    this.setState({ notes });
+		this.setState({ notes });
 
-    document.getElementById("form").reset();
+		document.getElementById('form').reset();
 
-    bake_cookie(cookie_key, this.state.notes);
-  }
+		bake_cookie(cookie_key, this.state.notes);
+	}
 
-  clear() {
-    delete_cookie(cookie_key);
+	clear() {
+		delete_cookie(cookie_key);
 
-    this.setState({ notes: [] });
-  }
+		this.setState({ notes: [] });
+	}
 
 
-  render() {
-    return (
-      <div>
-        <h2>Note to Self</h2>
-        <Form id="form" inline>
-          <FormControl  onChange={event => this.setState({ text: event.target.value })}/>
-          {' '}
-          <Button onClick={() => this.submit()}>Submit</Button>
-        </Form>
-        {
-          this.state.notes.map((note, index) => {
-            return (
-              <Form inline>
-                <Note key={index} note={note} />
-              </Form>
-            )
-          })
-        }
-        <hr/>
-        <Button onClick={() => this.clear()}>Clear Notes</Button>
-      </div>
-    )
-  }
+	render() {
+		return (
+			<div>
+				<h2>Note to Self</h2>
+				<Form id="form" inline>
+					<FormControl  onChange={event => this.setState({ text: event.target.value })}/>
+					{' '}
+					<Button onClick={() => this.submit()}>Submit</Button>
+				</Form>
+				{
+					this.state.notes.map((note, index) => {
+						return (
+								<Note key={index} note={note} />
+						);
+					})
+				}
+				<hr/>
+				<Button onClick={() => this.clear()}>Clear Notes</Button>
+			</div>
+		);
+	}
 }
 
 export default App;
