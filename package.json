@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.4.2",
+    "react": "^15.6.2",
     "react-bootstrap": "^0.32.3",
-    "react-dom": "^16.4.2",
+    "react-dom": "^15.6.2",
     "react-scripts": "1.1.5",
     "sfcookies": "^1.0.2"
   },
@@ -14,5 +14,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "enzyme": "^3.5.0",
+    "enzyme-adapter-react-15": "^1.1.0",
+    "react-test-renderer": "^15.6.2"
   }
 }

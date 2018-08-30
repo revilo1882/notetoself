@@ -45,13 +45,14 @@ class App extends Component {
         <Form id="form" inline>
           <FormControl  onChange={event => this.setState({ text: event.target.value })}/>
           {' '}
-          {console.log(this)}
           <Button onClick={() => this.submit()}>Submit</Button>
         </Form>
         {
           this.state.notes.map((note, index) => {
             return (
-              <Note key={index} note={note} />
+              <Form inline>
+                <Note key={index} note={note} />
+              </Form>
             )
           })
         }
