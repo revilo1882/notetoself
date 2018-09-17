@@ -1,4 +1,4 @@
-### Notetoself
+# Notetoself
 
 ## Introduction
 
@@ -9,8 +9,6 @@ A Udemy ty course to understand the fundamentals of React and fully testing the 
 Learn about using the Enzyme to test my React projects and be able to build React applications in a professional environment.
 
 ## Concepts Covered
-
-# React
 
 - ES6 Classes, ES6 Class inheritance, ES6 Template Strings, ES^ Imports and Exports, ES6 Arrow Functions, ES6 Destructuring Objects, React Components, JSX, State, Props, Lifecycle Hooks, Cookies
 
