@@ -6,7 +6,7 @@ A Udemy ty course to understand the fundamentals of React and fully testing the 
 
 ## Motivation
 
-Learn about using the Enzyme to test my React projects and be able to build React applications in a professional environment.
+Learn about using Enzyme to test my React projects and be able to build React applications in a professional environment.
 
 ## Concepts Covered
 
